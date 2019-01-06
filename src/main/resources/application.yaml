@@ -1,0 +1,10 @@
+server:
+  port: 8888
+spring:
+  data:
+    cassandra:
+      keyspace-name: reactive
+      port: 9042
+      schema-action: recreate_drop_unused
+      contact-points:
+        - localhost
