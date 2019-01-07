@@ -15,6 +15,5 @@ docker run --name reactive-cassandra -v $(pwd)/cassandra:/docker-entrypoint-init
 ```
 
 #### Application will start on 8888 port and exposes such endpoints
-
-    * `http://localhost:8888/users` - GET and POST requests
-    * `http://localhost:8888/users/{username}` - GET requests
+   * `http://localhost:8888/users` - GET and POST requests
+   * `http://localhost:8888/users/{username}` - GET requests
