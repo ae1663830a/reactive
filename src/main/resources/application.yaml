@@ -5,6 +5,6 @@ spring:
     cassandra:
       keyspace-name: reactive
       port: 9042
-      schema-action: recreate_drop_unused
+      schema-action: create_if_not_exists
       contact-points:
         - localhost

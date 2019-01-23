@@ -40,4 +40,8 @@ public class UserController {
                 .flatMap(user -> userRepository.save(user))
                 .flatMap(saved -> created(URI.create(String.format("/users/%s", saved.getUsername()))).build());
     }
+
+    public Mono<ServerResponse> hello(ServerRequest request) {
+        return ok().body(Mono.just("HELLO"), String.class);
+    }
 }

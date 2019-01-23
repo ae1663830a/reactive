@@ -28,6 +28,7 @@ public class WebConfig {
     public RouterFunction<?> routerFunction(UserController userController) {
         return route(GET("/users"), userController::users)
                 .andRoute(GET("/users/{username}"), userController::userByUsername)
-                .andRoute(POST("/users"), userController::saveUser);
+                .andRoute(POST("/users"), userController::saveUser)
+                .andRoute(GET("/"), userController::hello);
     }
 }
