@@ -1,6 +1,13 @@
 server:
   port: 8888
 spring:
+  application:
+    name: reactive
+  # admin server config
+  boot:
+    admin:
+      client:
+        url: http://localhost:9999
   data:
     cassandra:
       keyspace-name: reactive
