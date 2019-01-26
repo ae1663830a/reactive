@@ -53,3 +53,26 @@ curl -X GET http://localhost:8888/management/health
   }
 }
 ```
+
+#### Get application info
+```bash
+curl -X GET http://localhost:8888/management/info | jq
+```
+* Output
+```code
+"build": {
+    "artifact": "reactive",
+    "name": "reactive",
+    "time": 1548515536.45,
+    "version": "0.0.1",
+    "group": "lt.ae1663830a"
+  }
+```
+#### Get http endpoint metrics
+```bash
+curl -X GET http://localhost:8888/management/metrics/http.server.requests?tag=uri:/management/health | jq
+```
+
+### USEFUL LINKS
+
+[Git-properties plugin](https://github.com/n0mer/gradle-git-properties)

@@ -10,6 +10,15 @@ buildscript {
     }
 }
 
+plugins {
+    id "com.gorylenko.gradle-git-properties" version "2.0.0"
+}
+
+gitProperties {
+    dateFormat = "yyyy-MM-dd'T'HH:mmZ"
+    dateFormatTimeZone = "EET"
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -23,6 +32,9 @@ repositories {
     mavenCentral()
 }
 
+springBoot {
+    buildInfo()
+}
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-data-cassandra-reactive')
