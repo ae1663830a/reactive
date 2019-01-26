@@ -8,3 +8,13 @@ spring:
       schema-action: create_if_not_exists
       contact-points:
         - localhost
+# actuator config
+management:
+  endpoints:
+    web:
+      base-path: /management
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

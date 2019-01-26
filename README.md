@@ -18,3 +18,38 @@ docker run --name reactive-cassandra -v "$(pwd)/cassandra:/docker-entrypoint-ini
    * `http://localhost:8888/` - GET requests
    * `http://localhost:8888/users` - GET and POST requests
    * `http://localhost:8888/users/{username}` - GET requests
+
+### Actuator
+
+#### Get actuator endpoints
+```bash
+curl -X GET http://localhost:8888/management
+```
+
+#### Check applications health status
+
+```bash
+curl -X GET http://localhost:8888/management/health
+```
+* Output example
+```code
+{
+  "status": "UP",
+  "details": {
+    "cassandra": {
+      "status": "UP",
+      "details": {
+        "version": "3.11.3"
+      }
+    },
+    "diskSpace": {
+      "status": "UP",
+      "details": {
+        "total": 55410178988,
+        "free": 7593392108,
+        "threshold": 10485760
+      }
+    }
+  }
+}
+```
