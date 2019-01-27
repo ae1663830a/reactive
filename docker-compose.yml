@@ -1,0 +1,20 @@
+version: '3'
+services:
+  backend:
+    restart: always
+    depends_on:
+      - database
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8888:8888'
+    environment:
+      - SPRING_DATA_CASSANDRA_CONTACT-POINTS=database
+      - SPRING_DATA_CASSANDRA_PORT=9042
+  database:
+    build:
+      context: cassandra
+      dockerfile: Dockerfile
+    ports:
+      - '9042:9042'
