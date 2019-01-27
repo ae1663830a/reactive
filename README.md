@@ -88,6 +88,6 @@ curl -X GET http://localhost:8888/management/metrics/http.server.requests?tag=ur
 
 ### USEFUL LINKS
 
-[Reactor project](https://github.com/reactor/reactor-core)
-[Docker-compose](https://docs.docker.com/compose/)
-[Git-properties plugin](https://github.com/n0mer/gradle-git-properties)
+* [Reactor project](https://github.com/reactor/reactor-core)
+* [Docker-compose](https://docs.docker.com/compose/)
+* [Git-properties plugin](https://github.com/n0mer/gradle-git-properties)
