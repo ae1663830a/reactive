@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8081
 spring:
   application:
     name: reactive
@@ -28,3 +28,5 @@ management:
   info:
     git:
       mode: full
+test:
+  property: 'Hello, Default'

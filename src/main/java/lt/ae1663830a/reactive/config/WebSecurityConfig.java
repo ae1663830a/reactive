@@ -22,7 +22,9 @@ public class WebSecurityConfig {
                 .pathMatchers("/users", "/users/*").hasRole("USER")
                 .anyExchange().permitAll()
                 .and()
-                .formLogin().and()
+                .formLogin()
+                .and()
+                .csrf().disable()
                 .build();
     }
 

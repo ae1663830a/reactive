@@ -8,7 +8,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '8888:8888'
+      - '8081:8081'
     environment:
       - SPRING_DATA_CASSANDRA_CONTACT-POINTS=database
       - SPRING_DATA_CASSANDRA_PORT=9042

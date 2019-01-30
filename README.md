@@ -86,6 +86,19 @@ curl -X GET http://localhost:8888/management/info | jq
 curl -X GET http://localhost:8888/management/metrics/http.server.requests?tag=uri:/management/health | jq
 ```
 
+### SPRING CONFIG SERVER CLIENT
+
+**IMPORTANT** - config server must be running
+
+* Refresh properties without restarting server (this part is not dockerized yet)
+
+  * Push updated properties to config-server-resources repository
+  * Send post request to configured endpoint - `${hostname:port}/${management.endpoints.web.base-path}/refresh`
+
+```bash
+curl -X POST http://localhost:8081/management/refresh
+```
+
 ### USEFUL LINKS
 
 * [Reactor project](https://github.com/reactor/reactor-core)
