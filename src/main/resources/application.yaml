@@ -30,3 +30,14 @@ management:
       mode: full
 test:
   property: 'Hello, Default'
+
+eureka:
+  instance:
+    # register itself with ip address instead of hostname
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    # fetching local copy of the registry from eureka-server
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
